@@ -1,0 +1,66 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Linux (x86_64)
+--
+-- Host: 127.0.0.1    Database: mystock
+-- ------------------------------------------------------
+-- Server version	5.7.17-0ubuntu0.16.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `estore_daily_log`
+--
+
+DROP TABLE IF EXISTS `estore_daily_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estore_daily_log` (
+  `itemseqid` varchar(16) NOT NULL,
+  `item_ref` varchar(16) NOT NULL,
+  `item_name` varchar(20) DEFAULT NULL,
+  `entry_seq` int(11) NOT NULL AUTO_INCREMENT,
+  `amount` decimal(10,2) DEFAULT NULL,
+  `qty_sold` int(11) DEFAULT NULL,
+  `maker` varchar(20) DEFAULT NULL,
+  `auth_stat` varchar(1) DEFAULT NULL,
+  `trn_date` varchar(10) DEFAULT NULL,
+  `qty_left` int(10) DEFAULT NULL,
+  `cost_price` decimal(10,2) DEFAULT NULL,
+  `period_code` varchar(3) DEFAULT NULL,
+  `fin_year` varchar(4) DEFAULT NULL,
+  `delete_stat` varchar(1) DEFAULT NULL,
+  `time_stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `product` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`itemseqid`),
+  UNIQUE KEY `entry_seq_UNIQUE` (`entry_seq`)
+) ENGINE=InnoDB AUTO_INCREMENT=1003 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estore_daily_log`
+--
+
+LOCK TABLES `estore_daily_log` WRITE;
+/*!40000 ALTER TABLE `estore_daily_log` DISABLE KEYS */;
+INSERT INTO `estore_daily_log` VALUES ('001COKE0224103','COKE101080101','COKE2',102,3.00,1,'mik@gmail.com',NULL,NULL,5,2.00,NULL,NULL,NULL,NULL,'COKE'),('001COKE0224107','COKE101080101','COKE2',106,3.00,1,'emeka@yahoo.com','A',NULL,5,2.00,'M02','2017',NULL,NULL,'COKE'),('001COKE02251001','COKE101080101','COKE2',1001,3.00,1,'mik@gmail.com','A',NULL,23,2.00,'M02','2017',NULL,NULL,'COKE'),('001FANT0224105','FANT101080801','FANTA',104,3.00,1000,'emeka@yahoo.com','A',NULL,5,1.50,'M02','2017',NULL,NULL,'COKE'),('001FANT0224106','FANT101090201','FANTA',105,3.90,999,'emeka@yahoo.com','A',NULL,5,1.20,'M02','2017',NULL,NULL,'FANTA'),('001JACK0224108','JACK1DRINK0110','JACKET',107,100.00,8,'emeka@yahoo.com','A',NULL,5,8889.00,'M02','2017',NULL,NULL,'DRINK'),('001LUX_0225115','LUX_1DRINK0110','LUX_',112,667.00,1,'mik@gmail.com','A',NULL,66,999887.00,'M02','2017',NULL,NULL,'DRINK'),('001RUSH0224104','RUSH101090901','RUSH',103,2.50,200,'emeka@yahoo.com','A',NULL,5,1.00,'M02','2017',NULL,NULL,'DRINK'),('001RUSH0225109','RUSH101090901','RUSH',108,2.00,20,'mik@gmail.com','A',NULL,80,1.00,'M25','2017',NULL,NULL,'DRINK'),('001RUSH0225111','RUSH101090901','RUSH',109,2.60,10,'mik@gmail.com','A',NULL,70,1.00,'M25','2017',NULL,NULL,'DRINK'),('001SOAP0225112','SOAP203040901','OMO',110,4.00,10,'mik@gmail.com','A',NULL,12,2.00,'M02','2017',NULL,NULL,'DRINK'),('001SOAP0225113','SOAP203040901','OMO',111,4.00,1,'mik@gmail.com','A',NULL,11,2.00,'M02','2017',NULL,NULL,'DRINK'),('001TOV102251002','TOV1DRINK110','STOVE',1002,11.00,1,'mik@gmail.com','A','2017-02-25',33,3.00,'M02','2017',NULL,'2017-02-25 01:36:56','DRINK');
+/*!40000 ALTER TABLE `estore_daily_log` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-02-25  1:55:16

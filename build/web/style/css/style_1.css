@@ -1,0 +1,29 @@
+body {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+    margin: 5px 0;
+}
+
+.navbar-static-bottom {
+    margin-bottom: 0px;
+
+}
+
+.modal-body-color{
+    background: #101012;
+}
+.modal-footer-color{
+    background: #c3c2c4;
+}
+.modal-header-color{
+    background: #cccccc;
+}

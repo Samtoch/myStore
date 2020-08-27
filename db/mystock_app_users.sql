@@ -1,0 +1,63 @@
+CREATE DATABASE  IF NOT EXISTS `mystock` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `mystock`;
+-- MySQL dump 10.13  Distrib 5.7.17, for Linux (x86_64)
+--
+-- Host: 127.0.0.1    Database: mystock
+-- ------------------------------------------------------
+-- Server version	5.7.17-0ubuntu0.16.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `app_users`
+--
+
+DROP TABLE IF EXISTS `app_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `app_users` (
+  `USERNAME` varchar(20) NOT NULL,
+  `PASSWORD` varchar(100) DEFAULT NULL,
+  `NAME` char(40) DEFAULT NULL,
+  `PHONE_NO` varchar(15) DEFAULT NULL,
+  `DATE_CREATED` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `CREATED_BY` varchar(20) DEFAULT NULL,
+  `USER_STATUS` varchar(20) DEFAULT 'A',
+  `NO_OF_LOGINS` int(11) DEFAULT '0',
+  `RESET` varchar(2) DEFAULT 'Y',
+  `LAST_LOGIN_TIME` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `ROLE` varchar(10) DEFAULT NULL,
+  `EMAIL_ID` char(30) DEFAULT NULL,
+  PRIMARY KEY (`USERNAME`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `app_users`
+--
+
+LOCK TABLES `app_users` WRITE;
+/*!40000 ALTER TABLE `app_users` DISABLE KEYS */;
+INSERT INTO `app_users` VALUES ('','123','','','2017-02-07 12:15:17',NULL,'A',0,'Y','2017-02-07 12:15:17',NULL,NULL),('chinwe@gmail.com','123','Elsie','054677876655','2017-02-25 12:57:02',NULL,'A',0,'Y','2017-02-25 12:57:02',NULL,NULL),('emeka@yahoo.com','123','Emeka Horatio',NULL,'2016-12-30 14:28:16',NULL,'A',0,'Y','2016-12-30 14:28:16',NULL,NULL),('Emma','password',NULL,NULL,'2015-09-26 20:28:06','Mr.Toch','A',0,'N','2016-02-13 14:34:07','maker',NULL),('Mark','123','Mark Elorm',NULL,'2016-12-28 18:55:39',NULL,'A',0,'Y','2016-12-28 18:55:39',NULL,NULL),('mik@gmail.com','123','Mike','02155488552','2017-02-19 20:35:55',NULL,'A',0,'Y','2017-02-19 20:35:55',NULL,NULL),('Samtech','Password',NULL,NULL,'2016-12-28 18:34:33',NULL,'A',0,'Y','2016-12-28 18:34:33',NULL,NULL),('samtech@gmail.com','123','Samuel Tochi','22222222222','2017-02-07 11:57:11',NULL,'A',0,'Y','2017-02-07 11:57:11',NULL,NULL),('samtoch@gmail.com','123','Samuel Tochi','0261713017','2017-02-05 00:41:58',NULL,'A',0,'Y','2017-02-05 00:41:58',NULL,NULL),('samtochi@gmail.com','123','Samuel Tochi','222222222222','2017-02-05 00:54:54',NULL,'A',0,'Y','2017-02-05 00:54:54',NULL,NULL),('Tochi','/gJUuf5csPM4WQ20iM0irg==',NULL,NULL,'2015-11-07 08:29:16','Mr.Toch','A',0,'N','2016-04-24 22:09:40','maker',NULL),('wwwwwwwwww','wwwww','wwwwwwwwww',NULL,'2016-12-30 14:30:36',NULL,'A',0,'Y','2016-12-30 14:30:36',NULL,NULL);
+/*!40000 ALTER TABLE `app_users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-03-07 10:42:12
