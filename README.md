@@ -1,2 +1,2 @@
 # myStore
-Jsp and Servlet Project - Electronic Store
+Jsp and Servlet Project -  Electronic Store
